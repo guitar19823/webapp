@@ -1,4 +1,4 @@
-# solar_system
+# Web App
 Web App
 
 Development mode '$ npm run dev'
