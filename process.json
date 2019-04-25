@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "webapp",
+      "script": "index.js",
+      "exec_mode": "cluster",
+      "instances": 4
+    }
+  ]
+}

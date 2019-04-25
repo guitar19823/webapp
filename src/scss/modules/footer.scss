@@ -1,0 +1,49 @@
+// footer style
+
+footer {
+	width: 100%;
+	height: 70px;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 15%;
+	color: $light-color;
+	font-size: 14px;
+	border-top: 1px solid $border-lighter;
+
+	@media screen and (max-width: $tabletWidth) {
+		padding: 0 10%;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		padding: 0 5%;
+  }
+
+	.feedback {
+		cursor: pointer;
+
+		img {
+			margin-right: 5px;
+			height: 14px;
+			margin-bottom: 3px;
+
+			@media screen and (max-width: $tabletWidth) {
+				height: 12px;
+				margin-bottom: 3px;
+		  }
+		  @media screen and (max-width: $phoneWidth) {
+				height: 10px;
+				margin-bottom: 3px;
+		  }
+		}
+	}
+
+  @media screen and (max-width: $tabletWidth) {
+		height: 60px;
+		font-size: 12px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		height: 50px;
+		font-size: 10px;
+  }
+}

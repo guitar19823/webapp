@@ -1,0 +1,217 @@
+// main style
+
+main {
+	width: 100%;
+	margin-top: 70px;
+	padding: 50px 15%;
+	min-height: calc(100vh - 140px);
+	display: flex;
+	justify-content: center;
+
+  @media screen and (max-width: $tabletWidth) {
+		margin-top: 50px;
+		padding: 20px 10%;
+		min-height: calc(100vh - 110px);
+  }
+  @media screen and (max-width: $phoneWidth) {
+		margin-top: 30px;
+		padding: 20px 5%;
+		min-height: calc(100vh - 80px);
+  }
+
+  .home-page,
+  .privat-page {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		h1, h2, h3, img {
+			margin-bottom: 20px;
+		}
+
+		.user-data {
+			p {
+				margin-bottom: 10px;
+			}
+		}
+
+		img {
+			width: 100px;
+		}
+  }
+
+  .signin-page, .signup-page, .recover-page {
+  	width: 100%;
+  	display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+	  @media screen and (max-width: $phoneWidth) {
+			align-items: center;
+	  }
+
+		h2 {
+			margin-bottom: 30px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			
+		  @media screen and (max-width: $phoneWidth) {
+				width: 100%;
+		  }
+
+			label {
+				font-size: 80%;
+				font-weight: bold;
+				margin-bottom: 7px;
+				display: flex;
+
+				input {
+					margin-right: 10px;
+				}
+			}
+
+			.form-errors {
+				color: $danger-color;
+			}
+
+			.success {
+				color: $success-color;
+			}
+
+			.form-errors,
+			.success {
+				width: 100%;
+				margin-top: 10px;
+
+				p {
+					font-size: 80%;
+					margin-bottom: 5px;
+				}
+			}
+
+			.has-error {
+				border: 1px solid $danger-color!important;
+			}
+
+			input[type=email],
+			input[type=text],
+			input[type=phone],
+			input[type=password],
+			select {
+				border: 1px solid $border-lighter;
+				padding: 7px;
+				margin-bottom: 20px;
+				border-radius: 5px;
+				background: white;
+			}
+
+			input[type=email]:focus,
+			input[type=text]:focus,
+			input[type=phone]:focus,
+			input[type=password]:focus,
+			select:focus {
+				border: 1px solid $button-color;
+			}
+
+			input[type=submit] {
+				color: white;
+				text-transform: uppercase;
+				background: $button-color;
+				cursor: pointer;
+				padding: 12px;
+				margin-top: 15px;
+				border-radius: 20px;
+			}
+
+			input[type=submit]:hover {
+				background: $button-color-hover;
+			}
+		}
+
+		a {
+			margin-bottom: 20px;
+			font-size: 90%;
+			color: $primary-color;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+  }
+
+  .signin-page, .recover-page {
+		form {
+			width: 320px;
+			margin-bottom: 50px;
+			
+		  @media screen and (max-width: $phoneWidth) {
+				width: 100%;
+		  }
+		 }
+  }
+
+  .signup-page {
+		form {
+			width: 100%;
+
+			.inputs-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				div {
+					width: 49%;
+					display: flex;
+					flex-direction: column;
+				
+				  @media screen and (max-width: $phoneWidth) {
+						width: 100%;
+				  }
+				}
+
+				div:nth-child(1) { order: 1 }
+				div:nth-child(2) { order: 3 }
+				div:nth-child(3) { order: 5 }
+				div:nth-child(4) { order: 2 }
+				div:nth-child(5) { order: 4 }
+				div:nth-child(6) { order: 6 }
+				div:nth-child(7) { order: 7 }
+
+			  @media screen and (max-width: $phoneWidth) {
+					div:nth-child(1) { order: 1 }
+					div:nth-child(2) { order: 2 }
+					div:nth-child(3) { order: 3 }
+					div:nth-child(4) { order: 4 }
+					div:nth-child(5) { order: 5 }
+					div:nth-child(6) { order: 6 }
+					div:nth-child(7) { order: 7 }
+			  }
+			}
+
+			input[type=submit] {
+				width: 320px;
+
+			  @media screen and (max-width: $phoneWidth) {
+					width: 100%;
+			  }
+			}
+		}
+  }
+
+  .not-found {
+  	width: 100%;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+
+  	img {
+  		width: 80%;
+  	}
+  }
+}

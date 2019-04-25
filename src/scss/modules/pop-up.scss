@@ -1,0 +1,116 @@
+.black-panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .7);
+
+	.pop-up_close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 1001;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.pop-up_close:before,
+	.pop-up_close:after {
+		position: absolute;
+		content: "";
+		display: block;
+		width: 20px;
+		height: 2px;
+		border-radius: 1px;
+		background: $border-lighter;
+	}
+
+	.pop-up_close:before {
+		transform: rotate(45deg);
+	}
+	.pop-up_close:after {
+		transform: rotate(-45deg);
+	}
+
+	.pop-up {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 400px;
+		background: white;
+		border-radius: 5px;
+		animation: popUpOpen .2s .2s ease-out both;
+
+	  @media screen and (max-width: $phoneWidth) {
+			width: 80%;
+	  }
+
+		.pop-u_head {
+			padding: 15px;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.pop-u_body {
+			padding: 15px;
+
+			textarea, input {
+				width: 100%;
+				padding: 10px;
+			}
+
+			textarea, input[type=text] {
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				margin-bottom: 10px;
+			}
+
+			textarea:focus, input[type=text]:focus {
+				border: 1px solid $button-color;
+			}
+
+			textarea {
+				height: 70px;
+			}
+
+			input[type=submit] {
+				color: white;
+				border-radius: 5px;
+				background: $button-color;
+				cursor: pointer;
+			}
+
+			input[type=submit]:hover {
+				background: $button-color-hover;
+			}
+		}
+  }
+}
+	
+.close {
+	animation: popUpClose .2s ease-in both!important;
+}
+
+@keyframes popUpOpen {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+}
+
+@keyframes popUpClose {
+	0% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(0);
+	}
+}

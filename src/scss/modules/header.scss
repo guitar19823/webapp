@@ -1,0 +1,53 @@
+// header style
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 70px;
+	padding: 0 15%;
+	background: white;
+	border-bottom: 1px solid $border-lighter;
+
+  @media screen and (max-width: $tabletWidth) {
+		padding: 0 10%;
+		height: 50px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		padding: 0 5%;
+		height: 30px;
+  }
+}
+
+.logo {
+	width: 140px;
+
+  @media screen and (max-width: $tabletWidth) {
+		width: 110px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		width: 80px;
+  }
+}
+
+nav > ul {
+	display: flex;
+}
+
+nav > ul > li {
+	margin-left: 20px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: $light-color;
+}
+
+nav a:hover {
+	color: $neutral-regular;
+}
